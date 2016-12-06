@@ -1,6 +1,7 @@
 \documentclass[brazil]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}  % idioma
 \usepackage{lmodern}
 \usepackage{graphicx}			%para imagens
 \usepackage{epstopdf} 			%resolve problemas eps-pdf
@@ -57,80 +58,95 @@
   \end{itemize}
 \end{frame}
 
+\section{Introdução}
 \begin{frame}[fragile]
   \frametitle{Introdução}
 
-  \begin{itemize}
-      \item O Mercado de Animação:
-      
-      \begin{itemize}
-      
-        \item O mercado global de animação e jogos foi avaliado em \$122.20 bilhões em 2010 e é esperado que esta cifra atinja  \$242.93 bilhões em 2016.
-        
-        \item Este mercado pode ser subdividido em várias categorias sendo \textbf{Filmes} e \textbf{Efeitos Visuais} categorias de especial interesse para este trabalho.
-        
-        \item As técnicas de animação tridimensional ainda apresentam custos elevados e proibitivos para certas aplicações. Ela é em si uma técnica \textbf{cara}.
-          
-  \end{itemize} 
-      
-          
-  \end{itemize}
-
-\end{frame}
-\begin{frame}
+  \begin{definition}
+  Animação Computacional é a arte de criar imagens em movimento pelo uso de
+computadores.
+%%https://www.sciencedaily.com/terms/computer_animation.htm
+  \end{definition}
       \begin{figure}
         \centering
-        \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/sully.jpg}
-        \caption{Foram utilizados mais de 2 milhões de fios de cabelo individualmente nomeados para a construção do personagem \textit{Sully}. Um único quadro com o personagem custou em média de 11 a 12 horas de trabalho criativo.}
+        \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/flipBook.jpg}
+        \caption{A técnica de animação dá vida aos modelos ao posicioná-los em
+          poses ligeiramente diferentes, criando a ilusão do movimento }
       \end{figure}
+
+
 \end{frame}
 
-\begin{frame}
-
-\begin{itemize}
-      \item Técnicas para Transferência de Movimentos:
-      
-      \begin{itemize}
-      
-        \item Uma técnica importante que vem ao auxílio dos animadores consiste em transferir movimentos e expressões de um ator para um modelo computacional.
-        
-        \item Metodologias para captura ótica de \textbf{performance teatral} são utilizadas na indústria já há algum tempo.
-        
-        \item Outro recurso utilizado para a animação auxiliada por captura de vídeo é o uso de fantoches digitais, mas neste caso os requisitos de \textbf{tempo} são muito mais severos.
-        
-      \end{itemize}   
-          
-  \end{itemize} 
-	
-\end{frame}
 
 \begin{frame}
-  \begin{figure}
+  Animações computacionais são utilizadas em filmes completamente digitalmente
+  animados.
+      \begin{figure}
         \centering
-        \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/smaug_sherlock.png}
-        \caption{Smaug}
+        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/sully.jpg}
+        \caption{Um único quadro com o personagem Sully custou em média de 11 a 12 horas de trabalho criativo.}
       \end{figure}
-
 \end{frame}
+
+\begin{frame}
+  Ou também para compor filmes onde atores interagem com modelos computacionais.
+      \begin{figure}
+        \centering
+        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/actorAndAnimation.jpg}
+        \caption{O ator interage com personagem completamente digital.}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+  É possível também transferir movimentos de atores para modelos
+  \begin{figure}[ht]
+        \begin{minipage}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[width = 1.0\textwidth, keepaspectratio]{./img/smaug_left.jpg}
+        \end{minipage}
+        \begin{minipage}[b]{0.45\linewidth}
+          \centering
+              \includegraphics[width = 1.0\textwidth, keepaspectratio]{./img/smaug_right.jpg}
+        \end{minipage}
+
+        \caption{Movimentos e expressões são transferidos do ator para o modelo.
+       Artistas gráficos dão o retoque final na animação para garantir que o
+     resultado seja o mais convincente possível. }
+      \end{figure}
+\end{frame}
+
 
 \begin{frame}
   \begin{itemize}
       \item Motivação:
-      
       \begin{itemize}
-      
-        \item Apesar das soluções existentes apresentarem resultados adequados para as aplicações citadas, elas apresentam um \textbf{alto custo}. Esse custo se torna proibitivo para aplicações desenvolvidas por pequenas empresas.
-        
-        \item Um produto de baixo custo poderia, por exemplo, ser utilizado por \textbf{animadores independentes} para acelerar seus projetos.
-        
-        \item Programas de televisão educacionais para crianças abundam no mercado, mas são em sua maioria direcionados ao público infantil geral. Um nicho não atendido é o de
-\textbf{crianças autistas}.
-        
+        \item os produtos existente apresentam \textbf{alto custo}: 
+          \begin{itemize}
+            \item inúmeras horas de trabalho artístico
+            \item equipamentos especias de captura
+            \item ambientes controlados
+          \end{itemize}
+        \item Esse custo pode se tornar proibitivo para aplicações
+          independentes que não dispõe do mesmo orçamento que blockbusters.
       \end{itemize}   
-          
+      \item Será que é possível desenvolver um sistema de baixo custo que
+        realize transferência de movimento para um avatar computacional?
   \end{itemize} 
 
 \end{frame}
+
+
+\section{Metodologia}
+
+\subsection{Inspiração}
+\begin{frame}
+	\frametitle{Vídeo sobre Blend Shapes no Maia}
+      \begin{figure}
+        \centering
+        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/maiaDemo.png}
+      \end{figure}   
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Metodologia}
@@ -138,7 +154,6 @@
         \centering
         \includegraphics[width = 0.445\textwidth, keepaspectratio]{./img/TG-metodologia-correta-2.png}
       \end{figure}   
-          
 \end{frame}
 
 \begin{frame}
