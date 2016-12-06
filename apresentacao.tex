@@ -165,6 +165,8 @@ computadores.
       \end{figure}   
 \end{frame}
 
+\section{Rastreamento de Pontos Faciais}
+
 \begin{frame}
 \frametitle{Rastreamento de Pontos do Rosto}
   \begin{itemize}
@@ -175,6 +177,32 @@ computadores.
       \end{figure}
   \end{itemize} 
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo de Distribuição de Pontos - PDM}
+
+\begin{definition}
+  O PDM modela linearmente variações de forma não-rígidas e as compõe com uma transformação rígida global, colocando o i-ésimo ponto de interesse
+$\bm{v_i}$ em:
+
+\begin{equation}
+ \bm{v_i} = s \bm{R} ( \bm{v}_{i,0} + \bm{\Phi}_i \bm{q}) + \bm{t}
+\label{eq:PDM-equation}
+\end{equation}
+\end{definition}
+\end{frame}
+
+% http://www.menpo.org/menpofit/pdm.html
+\begin{frame}
+\frametitle{Rastreamento de Pontos do Rosto}
+      \begin{figure}
+          \centering
+          \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/pca_exaplained.png}
+          \caption{Visualização das componentes de deformação aprendidas pela análise PCA.}
+      \end{figure}
+\end{frame}
+ 
 
 \begin{frame}
 \frametitle{Estimação de Tridimensionalidade}
