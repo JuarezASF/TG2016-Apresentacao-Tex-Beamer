@@ -1,4 +1,4 @@
-apresentacao.pdf: 
+apresentacao.pdf: apresentacao.tex apresentacao.bib
 	pdflatex apresentacao.tex
 	bibtex apresentacao
 	bibtex apresentacao
