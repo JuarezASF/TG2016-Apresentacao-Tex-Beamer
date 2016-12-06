@@ -129,24 +129,120 @@
 \end{frame}
 
 \begin{frame}
-  \begin{itemize}
-      \item Motivação:
-      
-      \begin{itemize}
-      
-        \item Apesar das soluções existentes apresentarem resultados adequados para as aplicações citadas, elas apresentam um \textbf{alto custo}. Esse custo se torna proibitivo para aplicações desenvolvidas por pequenas empresas.
-        
-        \item Um produto de baixo custo poderia, por exemplo, ser utilizado por \textbf{animadores independentes} para acelerar seus projetos.
-        
-        \item Programas de televisão educacionais para crianças abundam no mercado, mas são em sua maioria direcionados ao público infantil geral. Um nicho não atendido é o de
-\textbf{crianças autistas}.
-        
-      \end{itemize}   
+	\frametitle{Metodologia}
+      \begin{figure}
+        \centering
+        \includegraphics[width = 0.445\textwidth, keepaspectratio]{./img/TG-metodologia-correta-2.png}
+      \end{figure}   
           
-  \end{itemize} 
-
 \end{frame}
 
+\begin{frame}
+\frametitle{Rastreamento de Pontos do Rosto}
+  \begin{itemize}
+      \item Algoritmo Simplificado:   
+          \begin{figure}
+        \centering
+        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/algorithm.png}
+      \end{figure}
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimação de Tridimensionalidade}
+  \begin{itemize}
+      \item Triangulação:
+      
+      \begin{figure}
+        \centering
+        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/TG_triangulation_pdf_washington_pt2.png}
+      \end{figure}
+      
+      $X = (u_x/f_1)  Z$ ou $ X = (u'_x/f_2)  Z + b $
+      
+      $Y = (u_y/f_1) Z$ ou $ Y = (u'_y/f_2) Z$
+      
+      $Z = f_1  f_2  b / (u_x  f_2 - u'_x  f_1)$
+      
+      \item Calibração dos Parâmetros Intrínsecos:
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}
+  \begin{itemize}
+      \item Resposta finita ao Impulso: 
+      
+      $\gamma(n) = 	\sum_{i=0}^{\mathcal{M}} b_i \chi(n-i)$
+      
+      \item Pela técnica da Janela: 
+      
+
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+  \begin{itemize}
+  	
+  	\item Blend Shapes:
+  	
+  	A técnica de Mistura de Poses - MP, do inglês \textit{Blend Shapes} ou \textit{Morph Target}, é uma das opções comumente empregadas para animar objetos deformáveis como a \textbf{face humana}.
+  	
+ 	 	\begin{itemize}
+  	
+ 	 	\item Definição:
+  	
+ 	 	A técnica consiste em gerar poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. Os modelos que representam as poses chaves devem ter a \textbf{mesma quantidade de vértices}.
+  	
+  	
+  	    \item Equação para a Renderização de uma pose $J$:
+      
+   		   $J = \sum_{i=1}^L  w_i M_i$
+      
+   		   $J = M_1 + \sum_{i = 2}^L w_i \Delta M_i $
+
+  \end{itemize} 
+
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados}
+  \begin{itemize}
+      \item Rastreamento de Pontos do Rosto:
+      
+       
+          
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Estabilização do Rastreamento}
+  \begin{itemize}
+      \item Estimação da Tridimencionalidade:
+      
+      \item Filtros:         
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+      \item Resultado Final:
+              
+  \end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Conclusões}
+  \begin{itemize}
+      \item Análise:
+      
+      \item Trabalhos Futuros:
+              
+  \end{itemize} 
+\end{frame}
 
 
 \end{document}
