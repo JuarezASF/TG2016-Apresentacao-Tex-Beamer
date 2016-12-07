@@ -175,6 +175,7 @@ computadores.
         \begin{figure}
             \centering
             \includegraphics[width = 0.4\textwidth, keepaspectratio]{./img/nick-marked.png}
+           \caption{CSIRO Face analysis SDK}
       \end{figure}
 \end{frame}
 
@@ -216,31 +217,7 @@ $\bm{v_i}$ em:
   \end{itemize} 
 \end{frame}
 
-\begin{frame}
-\frametitle{Mistura de Poses}
-  \begin{itemize}
-  	
-  	\item Blend Shapes:
-  	
-  	A técnica de Mistura de Poses - MP, do inglês \textit{Blend Shapes} ou \textit{Morph Target}, é uma das opções comumente empregadas para animar objetos deformáveis como a \textbf{face humana}.
-  	
- 	 	\begin{itemize}
-  	
- 	 	\item Definição:
-  	
- 	 	A técnica consiste em gerar poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. Os modelos que representam as poses chaves devem ter a \textbf{mesma quantidade de vértices}.
-  	
-  	
-  	    \item Equação para a Renderização de uma pose $J$:
-      
-   		   $J = \sum_{i=1}^L  w_i M_i$
-      
-   		   $J = M_1 + \sum_{i = 2}^L w_i \Delta M_i $
 
-  \end{itemize} 
-
-  \end{itemize} 
-\end{frame}
 \begin{frame}
   \begin{itemize}
   \item Mistura de Poses:
@@ -270,6 +247,31 @@ $\bm{v_i}$ em:
   \end{itemize} 
 \end{frame}
  
+\begin{frame}
+\frametitle{Mistura de Poses}
+  \begin{itemize}
+  	
+  	\item Blend Shapes:
+  	
+  	A técnica de Mistura de Poses - MP, do inglês \textit{Blend Shapes} ou \textit{Morph Target}, é uma das opções comumente empregadas para animar objetos deformáveis como a \textbf{face humana}.
+  	
+ 	 	\begin{itemize}
+  	
+ 	 	\item Definição:
+  	
+ 	 	A técnica consiste em gerar poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. Os modelos que representam as poses chaves devem ter a \textbf{mesma quantidade de vértices}.
+  	
+  	
+  	    \item Equação para a Renderização de uma pose $J$:
+      
+   		   $J = \sum_{i=1}^L  w_i M_i$
+      
+   		   $J = M_1 + \sum_{i = 2}^L w_i \Delta M_i $
+
+  \end{itemize} 
+
+  \end{itemize} 
+\end{frame}
 
 \begin{frame}
 \frametitle{Estimação de Tridimensionalidade}
@@ -287,7 +289,6 @@ $\bm{v_i}$ em:
       
       $Z = f_1  f_2  b / (u_x  f_2 - u'_x  f_1)$
       
-      \item Calibração dos Parâmetros Intrínsecos:
   \end{itemize} 
 \end{frame}
 
@@ -317,6 +318,13 @@ $\bm{v_i}$ em:
       
 \end{frame}
 
+\begin{frame}
+	\frametitle{Metodologia}
+      \begin{figure}
+        \centering
+        \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-slide.png}
+      \end{figure}   
+\end{frame}
 
 \begin{frame}
 \frametitle{Resultados}
