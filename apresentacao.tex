@@ -34,11 +34,11 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Conteúdo}
+  \frametitle{Sumário}
   \begin{itemize}
      \item Introdução
      \begin{itemize}
-     	\item Animação Computacional
+     	\item Mercado Global de Animação
     	 	\item Motivação
    	 \end{itemize}
      \item Metodologia
@@ -65,22 +65,44 @@
 
 
 \section{Introdução}
+%\begin{frame}[fragile]
+%  \frametitle{Introdução}
+%
+%  \begin{definition}
+%  Animação Computacional é a arte de criar imagens em movimento pelo uso de
+%computadores.
+%%%https://www.sciencedaily.com/terms/computer_animation.htm
+%  \end{definition}
+%      \begin{figure}
+%        \centering
+%        \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/flipBook.jpg}
+%        \caption{A técnica de animação dá vida aos modelos ao posicioná-los em
+%          poses ligeiramente diferentes, criando a ilusão do movimento }
+%
+%       %http://ewanmcgeachie.blogspot.com.br/2015/11/flipbook.html
+%      \end{figure}
+%
+%
+%\end{frame}
+
 \begin{frame}[fragile]
   \frametitle{Introdução}
 
-  \begin{definition}
-  Animação Computacional é a arte de criar imagens em movimento pelo uso de
-computadores.
-%%https://www.sciencedaily.com/terms/computer_animation.htm
-  \end{definition}
-      \begin{figure}
-        \centering
-        \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/flipBook.jpg}
-        \caption{A técnica de animação dá vida aos modelos ao posicioná-los em
-          poses ligeiramente diferentes, criando a ilusão do movimento }
+  \begin{itemize}
+  	\item Mercado Global de Animação
+  		\begin{itemize}
+  			\item Rápido crescimento.
+  			\item Pode ser dividido em várias categorias:
+  			 \begin{itemize}
+  				\item Desenvolvimento Web.
+  				\item Educação.
+  				\item \textbf{Filmes} e \textbf{Efeitos Visuais}. 
+   				\end{itemize}
+  				\item Técnicas atuais apresentam \textbf{alto custo}.
+   		\end{itemize}
+  
 
-       %http://ewanmcgeachie.blogspot.com.br/2015/11/flipbook.html
-      \end{figure}
+   \end{itemize}
 
 
 \end{frame}
@@ -92,22 +114,22 @@ computadores.
       \begin{figure}
         \centering
         \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/sully.jpg}
-        \caption{Um único quadro com o personagem Sully custou em média de 11 a 12 horas de trabalho criativo.}
+        \caption{Um único quadro com o personagem Sully custou em média de 11 a 12 horas de trabalho criativo (retirado de \cite{sullypixar}).}
       \end{figure}
 \end{frame}
 
-\begin{frame}
-  Ou também para compor filmes onde atores interagem com modelos computacionais.
-      \begin{figure}
-        \centering
-        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/actorAndAnimation.jpg}
-        \caption{O ator interage com personagem completamente digital.}
-%http://vignette3.wikia.nocookie.net/disney/images/2/28/Yoda_instructs_Obi-Wan_to_kill_Anakin.jpg/revision/latest?cb=20141229172307
-      \end{figure}
-\end{frame}
+%\begin{frame}
+%  Ou também para compor filmes onde atores interagem com modelos computacionais.
+%      \begin{figure}
+%        \centering
+%        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/actorAndAnimation.jpg}
+%        \caption{O ator interage com personagem completamente digital.}
+%%http://vignette3.wikia.nocookie.net/disney/images/2/28/Yoda_instructs_Obi-Wan_to_kill_Anakin.jpg/revision/latest?cb=20141229172307
+%      \end{figure}
+%\end{frame}
 
 \begin{frame}
-  É possível também transferir movimentos de atores para modelos
+  É possível também transferir movimentos de atores para modelos.
   \begin{figure}[ht]
         \begin{minipage}[b]{0.45\linewidth}
             \centering
@@ -120,7 +142,7 @@ computadores.
 
         \caption{Movimentos e expressões são transferidos do ator para o modelo.
        Artistas gráficos dão o retoque final na animação para garantir que o
-     resultado seja o mais convincente possível. }
+     resultado seja o mais convincente possível (retirado de \cite{sherlocksmaug}). }
       \end{figure}
 \end{frame}
 
@@ -129,10 +151,10 @@ computadores.
   \begin{itemize}
       \item Motivação:
       \begin{itemize}
-        \item os produtos existente apresentam \textbf{alto custo}: 
+        \item O \textbf{alto custo} dos produtos existentes é dado, principalmente, por alguns fatores: 
           \begin{itemize}
             \item inúmeras horas de trabalho artístico
-            \item equipamentos especias de captura
+            \item equipamentos especiais de captura
             \item ambientes controlados
           \end{itemize}
         \item Esse custo pode se tornar proibitivo para aplicações
@@ -179,6 +201,22 @@ computadores.
 \frametitle{Rastreamento de Pontos do Rosto}
         \begin{figure}
             \centering
+            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-pdm.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Rastreamento de Pontos do Rosto}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-pdm.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Rastreamento de Pontos do Rosto}
+        \begin{figure}
+            \centering
             \includegraphics[width = 0.4\textwidth, keepaspectratio]{./img/nick-marked.png}
            \caption{CSIRO Face analysis SDK}
       \end{figure}
@@ -211,6 +249,22 @@ $\bm{v_i}$ em:
 
 \begin{frame}
 \frametitle{Razão de Distância}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-razaodist.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Razão de Distância}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-razaodist.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Razão de Distância}
   \begin{itemize}
       \item Uma razão de distância é definida para cada pose de mistura
       \item Defini-se um par de pontos de interesse cuja distância será
@@ -221,6 +275,23 @@ $\bm{v_i}$ em:
         intermediárias
   \end{itemize} 
 \end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-MP.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-MP.png}
+      \end{figure}
+\end{frame}
+
 
 
 \begin{frame}
@@ -298,6 +369,23 @@ $\bm{v_i}$ em:
 
 \begin{frame}
 \frametitle{Estimação de Tridimensionalidade}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-3d.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimação de Tridimensionalidade}      
+
+ \begin{figure}
+            \centering
+            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-3d.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Estimação de Tridimensionalidade}
   \begin{itemize}
       \item Triangulação:
       
@@ -328,6 +416,23 @@ $\bm{v_i}$ em:
 
 \begin{frame}
 \frametitle{Filtros}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-filtros.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}      
+
+ \begin{figure}
+            \centering
+            \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/metodologia-destacado-filtros.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}
       \begin{figure}
 \centering
       \begin{tabular}{cc}
@@ -339,14 +444,6 @@ $\bm{v_i}$ em:
 	\caption{Respostas aos filtros projetados}
      \end{figure}  
       
-\end{frame}
-
-\begin{frame}
-	\frametitle{Metodologia}
-      \begin{figure}
-        \centering
-        \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-slide.png}
-      \end{figure}   
 \end{frame}
 
 \begin{frame}
@@ -378,7 +475,7 @@ $\bm{v_i}$ em:
 \begin{frame}
 \frametitle{Estabilização do Rastreamento}
   \begin{itemize}
-      \item Estimação da Tridimencionalidade:
+      \item Estimação da Tridimensionalidade:
       \begin{figure}
         \centering
         \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/media_3d.png}
