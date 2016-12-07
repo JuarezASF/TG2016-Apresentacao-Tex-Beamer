@@ -38,23 +38,28 @@
   \begin{itemize}
      \item Introdução
      \begin{itemize}
-     	\item O Mercado de Animação
-     	\item Técnicas para Transferência de Movimentos
+     	\item Animação Computacional
     	 	\item Motivação
    	 \end{itemize}
-     \item Metodologia Utilizada
+     \item Metodologia
      \begin{itemize}
     	 	\item Rastreamento de Pontos do Rosto
-    	 	\item Estimação de Tridimensionalidade e Filtros Digitais
+    	 	\item Razão de Distância
     	 	\item Mistura de Poses
+    	 	\item Estimação de Tridimensionalidade
+    	 	\item Filtros
    	 \end{itemize}
      \item Resultados
      \begin{itemize}
-    	 	\item Rastreamento de Pontos do Rosto
-    	 	\item Estimação de Tridimensionalidade e Filtros Digitais
+    	 	\item Estimação de Tridimensionalidade
+    	 	\item Filtros
+    	 	\item Mistura de Poses
     	 	\item Resultado Final
    	 \end{itemize}
      \item Conclusões
+     \begin{itemize}
+    	 	\item Trabalhos Futuros
+   	 \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -255,6 +260,15 @@ $\bm{v_i}$ em:
         \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/misturaPosesExplained000.png}
       \end{figure}
 \end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+
+	\begin{figure}
+        \centering
+        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/mistura-de-poses-explicacao.png}
+      \end{figure}
+\end{frame}
  
 \begin{frame}
 \frametitle{Mistura de Poses}
@@ -436,10 +450,29 @@ $\bm{v_i}$ em:
 \frametitle{Conclusões}
   \begin{itemize}
       \item Análise:
+      Foi possível desenvolver uma ferramenta para animação computacional de \textbf{baixo custo}.
+      \begin{itemize}
+         \item Equipamento barato.
+     	 \item Não é necessário ambiente controlado (ex: iluminação, background).
+     	 \item Sem marcadores.
+     	 \item Funcionamento independe do formato da face do ator (ex: gênero, idade, cor de pele).              
+  	  \end{itemize} 
       
       \item Trabalhos Futuros:
+      \begin{itemize}
+         \item Modelos mais detalhados.
+     	 \item Outros métodos para detecção de movimento em certas áreas da face.
+     	 \item Uso de detectores de nuvens de pontos (ex: Kinect).           
+  	  \end{itemize} 
               
   \end{itemize} 
+\end{frame}
+
+
+\begin{frame}
+
+  Perguntas?
+              
 \end{frame}
 
 
