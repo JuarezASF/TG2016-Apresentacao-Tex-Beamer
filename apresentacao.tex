@@ -58,6 +58,7 @@
   \end{itemize}
 \end{frame}
 
+
 \section{Introdução}
 \begin{frame}[fragile]
   \frametitle{Introdução}
@@ -72,6 +73,8 @@ computadores.
         \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/flipBook.jpg}
         \caption{A técnica de animação dá vida aos modelos ao posicioná-los em
           poses ligeiramente diferentes, criando a ilusão do movimento }
+
+       %http://ewanmcgeachie.blogspot.com.br/2015/11/flipbook.html
       \end{figure}
 
 
@@ -94,6 +97,7 @@ computadores.
         \centering
         \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/actorAndAnimation.jpg}
         \caption{O ator interage com personagem completamente digital.}
+%http://vignette3.wikia.nocookie.net/disney/images/2/28/Yoda_instructs_Obi-Wan_to_kill_Anakin.jpg/revision/latest?cb=20141229172307
       \end{figure}
 \end{frame}
 
@@ -147,6 +151,14 @@ computadores.
       \end{figure}   
 \end{frame}
 
+\begin{frame}
+ 	\frametitle{Metodologia Simplificada}
+       \begin{figure}
+         \centering
+         \includegraphics[width = 1.1\textwidth]{./img/EZ3d-simplified.png}
+       \end{figure}   
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Metodologia}
@@ -189,6 +201,60 @@ $\bm{v_i}$ em:
           \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/pca_exaplained.png}
           \caption{Visualização das componentes de deformação aprendidas pela análise PCA.}
       \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+  \begin{itemize}
+  	
+  	\item Blend Shapes:
+  	
+  	A técnica de Mistura de Poses - MP, do inglês \textit{Blend Shapes} ou \textit{Morph Target}, é uma das opções comumente empregadas para animar objetos deformáveis como a \textbf{face humana}.
+  	
+ 	 	\begin{itemize}
+  	
+ 	 	\item Definição:
+  	
+ 	 	A técnica consiste em gerar poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. Os modelos que representam as poses chaves devem ter a \textbf{mesma quantidade de vértices}.
+  	
+  	
+  	    \item Equação para a Renderização de uma pose $J$:
+      
+   		   $J = \sum_{i=1}^L  w_i M_i$
+      
+   		   $J = M_1 + \sum_{i = 2}^L w_i \Delta M_i $
+
+  \end{itemize} 
+
+  \end{itemize} 
+\end{frame}
+\begin{frame}
+  \begin{itemize}
+  \item Mistura de Poses:
+  \begin{figure}
+\centering
+\includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/rosto-neutro.png}
+        \caption{Pose Neutra}
+     \end{figure}         
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+  \item Mistura de Poses:
+  \begin{figure}
+\centering
+      \begin{tabular}{ccc}
+\includegraphics[width=0.3\linewidth]{./img/left-closed-eye.png} &
+\includegraphics[width=0.3\linewidth]{./img/right-closed-eye.png} &
+\includegraphics[width=0.3\linewidth]{./img/left-eyebrow.png} \\
+\includegraphics[width=0.3\linewidth]{./img/right-eyebrow.png} &
+\includegraphics[width=0.3\linewidth]{./img/rosto-feliz.png} &
+\includegraphics[width=0.3\linewidth]{./img/open-mouth.png} \\
+	\end{tabular}
+	\caption{Poses pré definidas utilizadas neste trabalho}
+     \end{figure}         
+  \end{itemize} 
 \end{frame}
  
 
@@ -238,31 +304,6 @@ $\bm{v_i}$ em:
       
 \end{frame}
 
-\begin{frame}
-\frametitle{Mistura de Poses}
-  \begin{itemize}
-  	
-  	\item Blend Shapes:
-  	
-  	A técnica de Mistura de Poses - MP, do inglês \textit{Blend Shapes} ou \textit{Morph Target}, é uma das opções comumente empregadas para animar objetos deformáveis como a \textbf{face humana}.
-  	
- 	 	\begin{itemize}
-  	
- 	 	\item Definição:
-  	
- 	 	A técnica consiste em gerar poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. Os modelos que representam as poses chaves devem ter a \textbf{mesma quantidade de vértices}.
-  	
-  	
-  	    \item Equação para a Renderização de uma pose $J$:
-      
-   		   $J = \sum_{i=1}^L  w_i M_i$
-      
-   		   $J = M_1 + \sum_{i = 2}^L w_i \Delta M_i $
-
-  \end{itemize} 
-
-  \end{itemize} 
-\end{frame}
 
 \begin{frame}
 \frametitle{Resultados}
@@ -329,34 +370,6 @@ $\bm{v_i}$ em:
   \end{itemize} 
 \end{frame}
 
-\begin{frame}
-  \begin{itemize}
-  \item Mistura de Poses:
-  \begin{figure}
-\centering
-\includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/rosto-neutro.png}
-        \caption{Pose Neutra}
-     \end{figure}         
-  \end{itemize} 
-\end{frame}
-
-\begin{frame}
-  \begin{itemize}
-  \item Mistura de Poses:
-  \begin{figure}
-\centering
-      \begin{tabular}{ccc}
-\includegraphics[width=0.3\linewidth]{./img/left-closed-eye.png} &
-\includegraphics[width=0.3\linewidth]{./img/right-closed-eye.png} &
-\includegraphics[width=0.3\linewidth]{./img/left-eyebrow.png} \\
-\includegraphics[width=0.3\linewidth]{./img/right-eyebrow.png} &
-\includegraphics[width=0.3\linewidth]{./img/rosto-feliz.png} &
-\includegraphics[width=0.3\linewidth]{./img/open-mouth.png} \\
-	\end{tabular}
-	\caption{Poses pré definidas utilizadas neste trabalho}
-     \end{figure}         
-  \end{itemize} 
-\end{frame}
 
 
 \begin{frame}
