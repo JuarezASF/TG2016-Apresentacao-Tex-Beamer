@@ -265,14 +265,45 @@ $\bm{v_i}$ em:
 
 \begin{frame}
 \frametitle{Razão de Distância}
+
+\begin{block}{Razão de Distância}
+  O objetivo desta etapa é extrair informação dos 66 pontos rastreados de forma
+  a construir os coeficientes de mistura necessários para a Mistura de Poses
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Razão de Distância}
   \begin{itemize}
-      \item Uma razão de distância é definida para cada pose de mistura
-      \item Defini-se um par de pontos de interesse cuja distância será
-        monitorada
       \item Em uma etapa de calibração, mede-se o máximo e o mínimo da
         distância de interesse a atribui-se a essas os valores de 1 e 0.
       \item Uma regra de proporção é utilizada para calcular poses
         intermediárias
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Razão de Distância}
+  \begin{itemize}
+      \item distância entre os 2 pontos de interesse deve ser normalizada 
+        para o intervalo $[0, 1]$.
+
+      \item Em uma etapa de calibração, mede-se a distância entre os pontos em
+        condições extremas.
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Razão de Distância}
+  \begin{itemize}
+      \item Em cada iteração do programa utiliza-se uma regra de proporção para
+        calcular o coeficiente de mistura:
+
+\begin{equation}
+	w_i^j = \frac{|d_i^j - d_i^{\text{min}}|}{|d_i^{\text{max}} - d^{\text{min}}|}
+   \label{eq:pesos1}
+\end{equation}
+
   \end{itemize} 
 \end{frame}
 
@@ -324,12 +355,14 @@ $\bm{v_i}$ em:
 \end{frame}
 
 \begin{frame}
-\frametitle{Mistura de Poses}
-
-	\begin{figure}
-        \centering
-        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/misturaPosesExplained000.png}
-      \end{figure}
+  \begin{itemize}
+  \item Mistura de Poses:
+  \begin{figure}
+\centering
+\includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/poseCombinada.png}
+        \caption{Exemplo de combinação possível. }
+     \end{figure}         
+  \end{itemize} 
 \end{frame}
 
 \begin{frame}
@@ -337,32 +370,75 @@ $\bm{v_i}$ em:
 
 	\begin{figure}
         \centering
-        \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/mistura-de-poses-explicacao.png}
+        \includegraphics[width = 0.7\textwidth, keepaspectratio]{./img/vectors00.png}
+        \caption{A combinação dos vetores é feita de forma que o resultado seja
+          um ponto sobre linha que conecta o primeiro ao segundo vetor.}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+
+        O resultado anterior não é coincidência: 
+          $$ (1 - w)\vec{A} + w \vec{B} = \vec{A} + w (\vec{B} -
+          \vec{A})$$
+
+	\begin{figure}
+        \centering
+        \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/vectors01.png}
+        \caption{Ilustração da propriedade para $w = 0.5$}
       \end{figure}
 \end{frame}
  
 \begin{frame}
 \frametitle{Mistura de Poses}
   \begin{itemize}
-  	
-  	\item Blend Shapes:
-  	
-  	A técnica de Mistura de Poses - MP, do inglês \textit{Blend Shapes} ou \textit{Morph Target}, é uma das opções comumente empregadas para animar objetos deformáveis como a \textbf{face humana}.
-  	
+  	\item Mistura de Formas( Blend Shapes ou Morph Target ):
  	 	\begin{itemize}
-  	
- 	 	\item Definição:
-  	
- 	 	A técnica consiste em gerar poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. Os modelos que representam as poses chaves devem ter a \textbf{mesma quantidade de vértices}.
-  	
-  	
-  	    \item Equação para a Renderização de uma pose $J$:
-      
-   		   $J = \sum_{i=1}^L  w_i M_i$
-      
-   		   $J = M_1 + \sum_{i = 2}^L w_i \Delta M_i $
+        \item Técnica de animação comumente empregadas para modelar objetos como a \textbf{face humana}.
+        \item gera poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. 
+  \end{itemize} 
 
   \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+ 	 	\begin{itemize}
+  	    \item A mistura vetorial acontece ponto a ponto.
+          
+        \item Sendo $\vec{M}_j^i$ o j-ésimo ponto da i-ésima pose, o j-ésimo
+          ponto da mistura $\vec{J}_j$ pode ser obtido por:
+
+      
+          \begin{equation}
+            \vec{J}_j = \sum_{i=1}^L  w_i \vec{M}_j^i
+          \end{equation}
+
+          \item O peso para a pose neutra é escolhido de forma a normalizar a
+            soma dos pesos:
+            \begin{equation}
+              w_1 = 1 - \sum_{i=2}^L w_i
+            \end{equation}
+          
+    \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+  \begin{itemize}
+  	
+  	\item Mistura de Formas( Blend Shapes ou Morph Target ):
+  	
+  	
+ 	 	\begin{itemize}
+          \item Com essa condição, pode-se obter a seguinte forma equivalente:
+      
+          \begin{equation}
+            \vec{J}_j = \vec{M}_1 + \sum_{i = 2}^L w_i \Delta \vec{M}_j^i 
+          \end{equation}
+
+    \end{itemize} 
 
   \end{itemize} 
 \end{frame}
