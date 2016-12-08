@@ -215,7 +215,7 @@
 \frametitle{Rastreamento de Pontos do Rosto}
         \begin{figure}
             \centering
-            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-pdm.png}
+            \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/metodologia-destacado-pdm.png}
       \end{figure}
 \end{frame}
 
@@ -265,7 +265,7 @@ $\bm{v_i}$ em:
 \frametitle{Razão de Distância}
         \begin{figure}
             \centering
-            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-razaodist.png}
+            \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/metodologia-destacado-razaodist.png}
       \end{figure}
 \end{frame}
 
@@ -276,29 +276,22 @@ $\bm{v_i}$ em:
   O objetivo desta etapa é extrair informação dos 66 pontos rastreados de forma
   a construir os coeficientes de mistura necessários para a Mistura de Poses
 \end{block}
-
 \end{frame}
 
 \begin{frame}
 \frametitle{Razão de Distância}
   \begin{itemize}
-
-      \item Para cada pose a ser misturada defini-se uma medida chamada
-        \textbf{razão de distância} que monitora a distância entre 2 dos 66
-        pontos do rastreamento.
-
+       \item Para cada pose a ser misturada defini-se uma medida chamada \textbf{razão de distância} que monitora a distância entre 2 dos 66 pontos do rastreamento.
   \end{itemize} 
 \end{frame}
 
 \begin{frame}
 \frametitle{Razão de Distância}
   \begin{itemize}
-      \item A distância entre os 2 pontos de interesse deve ser normalizada 
-        para o intervalo $[0, 1]$ antes de ser utilizada como coeficiente de
-        mistura.
+      \item A distância entre os 2 pontos de interesse deve ser normalizada para o intervalo $[0, 1]$ antes de ser utilizada como coeficiente de mistura.
 
       \item Para isso, em uma etapa de calibração mede-se a distância entre os pontos em
-        condições extremas.
+          condições extremas.
   \end{itemize} 
 \end{frame}
 
@@ -328,7 +321,7 @@ $\bm{v_i}$ em:
 \frametitle{Mistura de Poses}
         \begin{figure}
             \centering
-            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-MP.png}
+            \includegraphics[width = 0.5\textwidth, keepaspectratio]{./img/metodologia-destacado-MP.png}
       \end{figure}
 \end{frame}
 
@@ -465,7 +458,7 @@ $\bm{v_i}$ em:
 
  \begin{figure}
             \centering
-            \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/metodologia-destacado-3d.png}
+            \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/metodologia-destacado-3d.png}
       \end{figure}
 \end{frame}
 
@@ -478,12 +471,17 @@ $\bm{v_i}$ em:
         \centering
         \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/TG_triangulation_pdf_washington_pt2.png}
       \end{figure}
+      \begin{equation}
+      X = (u_x/f_1)  Z \ \  \text{	ou	  }\  \ X = (u'_x/f_2)  Z + b 
+      \end{equation}
       
-      $X = (u_x/f_1)  Z$ ou $ X = (u'_x/f_2)  Z + b $
+      \begin{equation}
+      Y = (u_y/f_1) Z \ \  \text{	ou	  }\  \ Y = (u'_y/f_2) Z
+	  \end{equation}      
       
-      $Y = (u_y/f_1) Z$ ou $ Y = (u'_y/f_2) Z$
-      
-      $Z = f_1  f_2  b / (u_x  f_2 - u'_x  f_1)$
+      \begin{equation}
+      Z = f_1  f_2  b / (u_x  f_2 - u'_x  f_1)
+	  \end{equation}      
       
   \end{itemize} 
 \end{frame}
@@ -496,6 +494,24 @@ $\bm{v_i}$ em:
         \centering
         \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/TG_calib_images.png}
       \end{figure}
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}
+      \begin{itemize}
+      	\item Filtro de Média Móvel:
+      	\begin{equation}
+      		y(n) = \frac{1}{4}(1 x(n) + 2 x(n-1) + x(n-2))
+      	\end{equation}
+      	
+      		
+      	\item Filtros projetados pela técnica de janela:
+      	\begin{equation}
+      		y(n) = \sum_{k=0}^L b_k x(n-k)
+      	\end{equation}
+
+      	
   \end{itemize} 
 \end{frame}
 
@@ -668,7 +684,10 @@ $\bm{v_i}$ em:
 
 \begin{frame}
 
-  Perguntas?
+\begin{center}
+\Huge Perguntas?
+\end{center}
+  
               
 \end{frame}
 
