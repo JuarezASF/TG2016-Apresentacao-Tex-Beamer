@@ -469,12 +469,17 @@ $\bm{v_i}$ em:
         \centering
         \includegraphics[width = 0.8\textwidth, keepaspectratio]{./img/TG_triangulation_pdf_washington_pt2.png}
       \end{figure}
+      \begin{equation}
+      X = (u_x/f_1)  Z \ \  \text{	ou	  }\  \ X = (u'_x/f_2)  Z + b 
+      \end{equation}
       
-      $X = (u_x/f_1)  Z$ ou $ X = (u'_x/f_2)  Z + b $
+      \begin{equation}
+      Y = (u_y/f_1) Z \ \  \text{	ou	  }\  \ Y = (u'_y/f_2) Z
+	  \end{equation}      
       
-      $Y = (u_y/f_1) Z$ ou $ Y = (u'_y/f_2) Z$
-      
-      $Z = f_1  f_2  b / (u_x  f_2 - u'_x  f_1)$
+      \begin{equation}
+      Z = f_1  f_2  b / (u_x  f_2 - u'_x  f_1)
+	  \end{equation}      
       
   \end{itemize} 
 \end{frame}
@@ -487,6 +492,24 @@ $\bm{v_i}$ em:
         \centering
         \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/TG_calib_images.png}
       \end{figure}
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}
+      \begin{itemize}
+      	\item Filtro de Média Móvel:
+      	\begin{equation}
+      		y(n) = \frac{1}{4}(1 x(n) + 2 x(n-1) + x(n-2))
+      	\end{equation}
+      	
+      		
+      	\item Filtros projetados pela técnica de janela:
+      	\begin{equation}
+      		y(n) = \sum_{k=0}^L b_k x(n-k)
+      	\end{equation}
+
+      	
   \end{itemize} 
 \end{frame}
 
