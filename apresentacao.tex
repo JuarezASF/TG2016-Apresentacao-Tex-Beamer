@@ -270,25 +270,28 @@ $\bm{v_i}$ em:
   O objetivo desta etapa é extrair informação dos 66 pontos rastreados de forma
   a construir os coeficientes de mistura necessários para a Mistura de Poses
 \end{block}
+
 \end{frame}
 
 \begin{frame}
 \frametitle{Razão de Distância}
   \begin{itemize}
-      \item Em uma etapa de calibração, mede-se o máximo e o mínimo da
-        distância de interesse a atribui-se a essas os valores de 1 e 0.
-      \item Uma regra de proporção é utilizada para calcular poses
-        intermediárias
+
+      \item Para cada pose a ser misturada defini-se uma medida chamada
+        \textbf{razão de distância} que monitora a distância entre 2 dos 66
+        pontos do rastreamento.
+
   \end{itemize} 
 \end{frame}
 
 \begin{frame}
 \frametitle{Razão de Distância}
   \begin{itemize}
-      \item distância entre os 2 pontos de interesse deve ser normalizada 
-        para o intervalo $[0, 1]$.
+      \item A distância entre os 2 pontos de interesse deve ser normalizada 
+        para o intervalo $[0, 1]$ antes de ser utilizada como coeficiente de
+        mistura.
 
-      \item Em uma etapa de calibração, mede-se a distância entre os pontos em
+      \item Para isso, em uma etapa de calibração mede-se a distância entre os pontos em
         condições extremas.
   \end{itemize} 
 \end{frame}
