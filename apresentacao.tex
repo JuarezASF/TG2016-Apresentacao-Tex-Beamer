@@ -325,6 +325,17 @@ $\bm{v_i}$ em:
       \end{figure}
 \end{frame}
 
+\begin{frame}
+\frametitle{Mistura de Poses}
+  \begin{itemize}
+  	\item Mistura de Formas( Blend Shapes ou Morph Target ):
+ 	 	\begin{itemize}
+        \item Técnica de animação comumente empregadas para modelar objetos como a \textbf{face humana}.
+        \item gera poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. 
+  \end{itemize} 
+
+  \end{itemize} 
+\end{frame}
 
 
 \begin{frame}
@@ -367,42 +378,7 @@ $\bm{v_i}$ em:
   \end{itemize} 
 \end{frame}
 
-\begin{frame}
-\frametitle{Mistura de Poses}
-
-	\begin{figure}
-        \centering
-        \includegraphics[width = 0.7\textwidth, keepaspectratio]{./img/vectors00.png}
-        \caption{A combinação dos vetores é feita de forma que o resultado seja
-          um ponto sobre linha que conecta o primeiro ao segundo vetor.}
-      \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Mistura de Poses}
-
-        O resultado anterior não é coincidência: 
-          $$ (1 - w)\vec{A} + w \vec{B} = \vec{A} + w (\vec{B} -
-          \vec{A})$$
-
-	\begin{figure}
-        \centering
-        \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/vectors01.png}
-        \caption{Ilustração da propriedade para $w = 0.5$}
-      \end{figure}
-\end{frame}
  
-\begin{frame}
-\frametitle{Mistura de Poses}
-  \begin{itemize}
-  	\item Mistura de Formas( Blend Shapes ou Morph Target ):
- 	 	\begin{itemize}
-        \item Técnica de animação comumente empregadas para modelar objetos como a \textbf{face humana}.
-        \item gera poses intermediárias como uma \textbf{combinação linear} de poses pré-definidas. 
-  \end{itemize} 
-
-  \end{itemize} 
-\end{frame}
 
 \begin{frame}
 \frametitle{Mistura de Poses}
@@ -443,6 +419,31 @@ $\bm{v_i}$ em:
     \end{itemize} 
 
   \end{itemize} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+
+	\begin{figure}
+        \centering
+        \includegraphics[width = 0.7\textwidth, keepaspectratio]{./img/vectors00.png}
+        \caption{A combinação dos vetores é feita de forma que o resultado seja
+          um ponto sobre linha que conecta o primeiro ao segundo vetor.}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mistura de Poses}
+
+        O resultado anterior não é coincidência: 
+          $$ (1 - w)\vec{A} + w \vec{B} = \vec{A} + w (\vec{B} -
+          \vec{A})$$
+
+	\begin{figure}
+        \centering
+        \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/vectors01.png}
+        \caption{Ilustração da propriedade para $w = 0.5$}
+      \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -499,6 +500,23 @@ $\bm{v_i}$ em:
 
 \begin{frame}
 \frametitle{Filtros}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-filtros.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}      
+
+ \begin{figure}
+            \centering
+            \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/metodologia-destacado-filtros.png}
+      \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Filtros}
       \begin{itemize}
       	\item Filtro de Média Móvel:
       	\begin{equation}
@@ -515,22 +533,6 @@ $\bm{v_i}$ em:
   \end{itemize} 
 \end{frame}
 
-\begin{frame}
-\frametitle{Filtros}
-        \begin{figure}
-            \centering
-            \includegraphics[width = 0.9\textwidth, keepaspectratio]{./img/metodologia-marcado-filtros.png}
-      \end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{Filtros}      
-
- \begin{figure}
-            \centering
-            \includegraphics[width = 0.6\textwidth, keepaspectratio]{./img/metodologia-destacado-filtros.png}
-      \end{figure}
-\end{frame}
 
 \begin{frame}
 \frametitle{Filtros}
@@ -679,6 +681,21 @@ $\bm{v_i}$ em:
   	  \end{itemize} 
               
   \end{itemize} 
+\end{frame}
+
+\begin{frame}
+ 	\frametitle{Metodologia Simplificada}
+       \begin{figure}
+         \centering
+         \includegraphics[width = 1.1\textwidth]{./img/EZ3d-simplified.png}
+       \end{figure}   
+\end{frame}
+
+\begin{frame}[allowframebreaks]%in case more than 1 slide needed
+    {\footnotesize
+    \bibliographystyle{abnt-num}
+    \bibliography{apresentacao}
+    }
 \end{frame}
 
 
